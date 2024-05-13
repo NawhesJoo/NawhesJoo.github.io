@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: Nawhes # the main title
 
-tagline: "어떻게든 개발하는 부실감자" # it will display as the sub-title
+tagline: "어떻게든 살아가는 부실 개발자" # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
