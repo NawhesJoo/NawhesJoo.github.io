@@ -19,7 +19,7 @@ title: Nawhes # the main title
 tagline: "어떻게든 살아가는 부실 개발자" # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  "어떻게든 살아가는 부실 개발자 Nawhes's Blog"
+  어떻게든 살아가는 부실 개발자 Nawhes's Blog
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
