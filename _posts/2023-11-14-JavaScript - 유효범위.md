@@ -1,7 +1,7 @@
 ---
 title: JavaScript - 유효범위
 description: >-
-  JavaScript의 유효범위에 대해 알아보자.
+  
 author: NawhesJoo
 date: 2023-11-14 20:55:00 +0900
 categories: [Language, JavaScript]
