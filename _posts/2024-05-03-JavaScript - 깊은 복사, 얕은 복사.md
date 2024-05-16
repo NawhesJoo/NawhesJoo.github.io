@@ -6,7 +6,7 @@ author: NawhesJoo
 date: 2024-05-03 20:55:00 +0900
 categories: [Language, JavaScript]
 tags: [type, primitive, reference, 깊은 복사, 얕은 복사]
-pin: true
+pin: false
 math: true
 mermaid: true
 image:

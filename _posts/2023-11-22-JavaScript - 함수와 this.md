@@ -6,7 +6,7 @@ author: NawhesJoo
 date: 2023-11-22 20:55:00 +0900
 categories: [Language, JavaScript]
 tags: [function, this]
-pin: true
+pin: false
 math: true
 mermaid: true
 image:

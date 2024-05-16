@@ -6,7 +6,7 @@ author: NawhesJoo
 date: 2024-05-07 20:55:00 +0900
 categories: [Language, JavaScript]
 tags: [scope, lexical scope, static scope, closure]
-pin: true
+pin: false
 math: true
 mermaid: true
 image:

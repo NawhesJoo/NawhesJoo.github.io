@@ -6,7 +6,7 @@ author: NawhesJoo
 date: 2024-05-08 20:55:00 +0900
 categories: [Language, JavaScript]
 tags: [scope, scope chain, execution context]
-pin: true
+pin: false
 math: true
 mermaid: true
 image:

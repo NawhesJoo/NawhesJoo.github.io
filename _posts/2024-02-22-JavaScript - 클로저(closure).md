@@ -6,7 +6,7 @@ author: NawhesJoo
 date: 2024-02-22 20:55:00 +0900
 categories: [Language, JavaScript]
 tags: [closure, scope]
-pin: true
+pin: false
 math: true
 mermaid: true
 image:

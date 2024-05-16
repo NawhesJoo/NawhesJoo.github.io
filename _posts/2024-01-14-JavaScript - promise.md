@@ -6,7 +6,7 @@ author: NawhesJoo
 date: 2024-01-14 20:55:00 +0900
 categories: [Language, JavaScript]
 tags: [promise]
-pin: true
+pin: false
 math: true
 mermaid: true
 image:

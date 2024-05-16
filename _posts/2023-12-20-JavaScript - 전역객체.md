@@ -6,7 +6,7 @@ author: NawhesJoo
 date: 2023-12-20 20:55:00 +0900
 categories: [Language, JavaScript]
 tags: [global, object]
-pin: true
+pin: false
 math: true
 mermaid: true
 image:

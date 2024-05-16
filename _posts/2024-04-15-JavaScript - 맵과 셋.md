@@ -6,7 +6,7 @@ author: NawhesJoo
 date: 2024-04-15 20:55:00 +0900
 categories: [Language, JavaScript]
 tags: [map, set]
-pin: true
+pin: false
 math: true
 mermaid: true
 image:

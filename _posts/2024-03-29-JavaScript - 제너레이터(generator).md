@@ -6,7 +6,7 @@ author: NawhesJoo
 date: 2024-03-29 20:55:00 +0900
 categories: [Language, JavaScript]
 tags: [generator]
-pin: true
+pin: false
 math: true
 mermaid: true
 image:
