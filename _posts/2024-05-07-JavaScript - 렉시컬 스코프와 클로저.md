@@ -6,7 +6,7 @@ author: NawhesJoo
 date: 2024-05-07 20:55:00 +0900
 categories: [Language, JavaScript]
 tags: [scope, lexical scope, static scope, closure]
-pin: false
+pin: true
 math: true
 mermaid: true
 image:
@@ -58,7 +58,8 @@ init()에 선언된 name이라는 변수가 존재하지 않고 상위스코프(
 
 ## 스코프(Scope)란?
 
-`스코프`는 `변수나 함수가 유효할 수 있는 범위`를 뜻하는데,
+`스코프`는 `변수나 함수가 유효할 수 있는 범위`를 뜻한다.
+
 그렇기 때문에 자바스크립트 엔진이 `식별자를 검색할 때 사용하는 규칙`으로 작용한다.
 
 ---
@@ -78,7 +79,7 @@ function sayHello(){
   const b = 'World';
   
   function sumString(){
-    console.log(a + '' + b);
+    console.log(a + ' ' + b);
   }
   
   return sumString;
@@ -147,3 +148,5 @@ console.log(
 위 커링함수를 조금 다른 방식으로 사용해볼 수도 있다.
 `부분적용함수`란 n개의 인자를 받는 함수에 `미리 m개의 인자만 넘겨 기억`시켰다가, `나중에 (n-m)개의 인자`를 넘기면 비로소 원래 함수의 실행결과를 얻을 수 있도록 하는 함수를 말한다.
 다시 말해, 하나의 고정값을 가지고 다른 인자들의 값을 변환시켜야 하는 경우에 이 부분적용함수를 사용할 수 있다.
+
+추후에 커링에 대해 자세히 알아보도록 하자.
