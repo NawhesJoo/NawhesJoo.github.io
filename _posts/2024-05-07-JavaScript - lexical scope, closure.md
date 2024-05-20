@@ -96,6 +96,8 @@ myFunc();	// 'Hello World'
 
 모든 자바스크립트 함수는 선언될(생성될) 당시에 클로저가 형성되어 주변 환경, 즉 `렉시컬 스코프를 기억`할 수 있다.
 
+[클로저 더 알아보기](https://nawhes.techblog.doubleuem.com/posts/JavaScript-closure/)
+
 ---
 
 ### 클로저의 활용
