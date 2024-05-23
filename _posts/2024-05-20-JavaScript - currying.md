@@ -99,11 +99,50 @@ function addX(x){
   addFour(1); // 4 + 1 = 5
 ```
 
+위 코드를 하나씩 살펴보자.
+
+```javascript
+function addX(x){
+  return function(a){
+    return add(a, x);
+  }
+}
+```
+
+위 코드에서 addX 함수는 하나의 인수 x를 받아들이고, 내부에서 또 다른 함수를 반환한다. 이 내부 함수는 a라는 인수를 받아들이고, add(a, x)를 호출한다. 이때 x는 addX가 호출될 때의 값으로 유지된다. 이 구조는 클로저를 형성한다.
+
+> 클로저 : 클로저는 함수가 자신이 선언될 때의 환경(스코프)을 기억하는 기능이다. 따라서 내부 함수는 addX가 호출될 때의 x 값을 `기억`하고 있다.
+{: .prompt-info }
+
+```javascript
+const addTwo = addX(2);   // 클로저 함수 생성, x = 2
+const addThree = addX(3); // 클로저 함수 생성, x = 3
+const addFour = addX(4);  // 클로저 함수 생성, x = 4
+```
+
+이 코드들은 각각 'addX' 함수에 2, 3, 4를 인수로 전달하여 새로운 함수를 반환받는다.
+
+예를 들어, `addTwo`는 `addX(2)`를 호출하여 `x`가 2인 클로저를 반환받는다.
+
+```javascript
+addTwo(2);  // 2 + 2 = 4
+addThree(5);  // 3 + 5 = 8
+addFour(1); // 4 + 1 = 5
+```
+
+`addTwo(2)`를  호출하면 내부 함수는 `a`가 `2`이고 `x`가 `2`인 상황에서 `add(2, 2)`를 호출한다.
+
+`addThree`와 `addFour`도 동일한 방식으로 작동한다.
+
+> `addTwo`, `addThree`, `addFour` 함수들은 클로저로서 `addX`가 호출될 때의 `x` 값을 기억하며, 호출될 때마다 해당 값을 사용하여 `add` 함수를 호출한다.
+{: .prompt-tip }
+
+
 ![](https://velog.velcdn.com/images/nawhes_joo/post/e74fc8d1-8f55-463c-a0c8-8ac182374dec/image.png)
 
 다음과 같이 addX 함수를 이용해서 여러 파생 함수들을 만들 수 있다.
 
-addX 함수는 이렇게 동작한다.
+정리하자면
 
 + 인자 x를 받아서 익명함수를 반환한다. 그 함수는 function(a){ return add(a,x); } 의 형태이다.
 
