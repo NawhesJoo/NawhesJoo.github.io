@@ -6,7 +6,7 @@ author: NawhesJoo
 date: 2024-05-20 14:28:00 +0900
 categories: [Language, JavaScript]
 tags: [currying]
-pin: false
+pin: true
 math: true
 mermaid: true
 image:
