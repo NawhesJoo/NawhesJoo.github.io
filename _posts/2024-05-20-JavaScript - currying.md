@@ -261,22 +261,72 @@ function 키워드 없이 화살표 함수로 표현하여 방정식 4x^(x+2)를
 const add = (a,b) => a + b;
 const multiply = (a,b) => a * b;
 
+/*
+const add = function(a,b){
+  return a + b;
+}
+
+const multiply = function(a,b){
+  a * b;
+}
+*/
+
 const addX = x => a => add(a, x);
+/*
+const addX = function(x){
+  return function(a){
+    return add(a,x);
+  }
+}
+*/
+
 const addTwo = addX(2);
 
+
 const multiplyX = x => a => multiply(a, x);
+/*
+const multiplyX = function(x){
+  return function(a){
+    return multiply(a, x);
+  }
+}
+*/
+
 const multiplyFour = multiplyX(4);
+
 ```
 
 이렇게 커링을 이용해 addTwo, multiplyFour 함수를 만들었다.
 
 ```javascript
 const compose = fn => fn2 => x => fn2(x) * fn(x);
+/*
+const compose = function(fn){
+  return function(fn2){
+    return function(x){
+      return fn2(x) * fn(x);
+    }
+  }
+}
+*/
+
 const equation = compose(addTwo)(multiplyFour);
+/*
+const compose = function(addTwo){
+  return function(multiplyFour){
+    return function(x){
+      return multiplyFour(x) * addTwo(x);
+    }
+  }
+}
+*/
+
 equation(10) // (4 * 10) * (10 + 2) = 40 * 12 = 480
 ```
 
 equation 함수에 넣는 값이 x가 되어 4x(x+2)의 다양한 값에 대한 결과를 받을 수 있다.
+
+---
 
 만약 5x(x+2)의 결과를 반환하는 함수가 필요하다면?
 
