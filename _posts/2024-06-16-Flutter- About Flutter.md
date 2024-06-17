@@ -6,7 +6,7 @@ author: NawhesJoo
 date: 2024-06-16 15:21:00 +0900
 categories: [Framework, Flutter]
 tags: [Flutter]
-pin: false
+pin: true
 math: true
 mermaid: true
 image:
