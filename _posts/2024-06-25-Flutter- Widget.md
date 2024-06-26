@@ -159,4 +159,3 @@ return MaterialApp(
 
 위 코드처럼 수정한 후 Chrome으로 main.dart를 실행하였다.
 
-![alt text](image.png) 
