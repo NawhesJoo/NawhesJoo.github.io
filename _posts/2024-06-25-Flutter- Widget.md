@@ -42,7 +42,8 @@ rules:
 
 1. `prefer_typing_uninitialized_variables`
 	+ 설명 : 초기화되지 않은 변수에 명시적으로 타입을 지정하도록 권장한다.
-    + 예시  
+    + 예시
+
     ```dart
     // 권장되지 않음
     var foo;
@@ -81,8 +82,8 @@ rules:
 4. `avoid_print`
 	+ 설명 : `print()` 함수 대신에 로깅(logging) 패키지를 사용하도록 권장한다.
     		`print()`는 디버깅 목적으로만 사용되며, 프로덕션 코드에서는 적절한 로깅 프레임워크를 사용하는 것이 좋다.
-            
 	+ 예시
+
     ```dart
     // 권장되지 않음
     print('Hello, World!');
@@ -191,9 +192,8 @@ Chrome으로 main.dart를 실행해보자.
 
 ### Icon
 
->```dart
-Icon(Icons.아이콘 이름)
-```
+> __Icon(Icons.아이콘 이름)__
+
 
 ```dart
 return MaterialApp(
@@ -226,14 +226,14 @@ return MaterialApp(
 https://fontawesomeicons.com/materialdesign/icons?search=list
 >
 이 사이트에서 검색해서 확인할 수 있다.
+{: .prompt-info }
 
 ---
 
 ### Image
 
->```dart
-Image.asset('경로')
->```
+> __Image.asset('경로')__
+
 
 이미지를 넣고 싶으면 프로젝트 폴더 안에 존재해야 한다.
 
@@ -297,14 +297,16 @@ Image.asset('경로')에서 경로 위치에 이미지 파일명만 입력하면
 
 ### Container / SizedBox
 
-> Container( 스타일(스타일 명 : 값) ) / SizedBox()
-
+> __Container( 스타일(스타일 명 : 값) ) / SizedBox()__
 
 ```dart
 return MaterialApp(
 	home: Container( width: 50, height: 50, color: Colors.blue )
 );
 ```
+
+> 플러터의 사이즈의 단위는 LP이다.
+50LP == 1.2cm
 
 위 코드처럼 Container()를 입력하고 테스트해보자.
 
@@ -314,16 +316,13 @@ return MaterialApp(
 
 50을 입력했는데 왜 이렇게 크게 나올까??
 
-> 50을 입력했지만, 단위를 입력하지 않았다. 플러터의 사이즈의 단위는 LP이다.
-> 50LP == 1.2cm
-
 1.2cm라고 해도 너무 크다.
 
 그 이유는 무엇일까?
 
 `어디부터 50을 차지할지 몰라서 그렇다`
 
-어디부터 차지할지는 부모가 정한다.
+어디부터 차지할지는 `부모`가 정한다.
 
 
 ```dart
