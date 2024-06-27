@@ -20,7 +20,7 @@ comments: true
 
 우선 시작하기 전, analysis_options.yaml 파일을 수정하자
 
-## 세팅
+## Setting
 
 ![](https://velog.velcdn.com/images/nawhes_joo/post/7ccf6e80-6a5e-4ac9-82ab-e9ac967c9def/image.png)
 
@@ -165,9 +165,8 @@ Widget의 개념이 매우 중요하다.
 
 우선 글자 먼저 넣어보자.
 
-```dart
-Text('글자')
-```
+
+> __Text('글자')__
 
 ```dart
 return MaterialApp(
@@ -223,7 +222,7 @@ return MaterialApp(
 
 >아이콘 이름은
 >
-https://fontawesomeicons.com/materialdesign/icons?search=list
+[https://fontawesomeicons.com/materialdesign/icons?search=list](https://fontawesomeicons.com/materialdesign/icons?search=list)
 >
 이 사이트에서 검색해서 확인할 수 있다.
 {: .prompt-info }
@@ -249,7 +248,7 @@ https://fontawesomeicons.com/materialdesign/icons?search=list
 
 ---
 
-#### yaml 수정
+#### pubspec 수정
 
 그 다음, `pubspec.yaml` 파일을 열어보자.
 
