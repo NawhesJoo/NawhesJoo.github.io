@@ -31,7 +31,8 @@ rules 란에 아래 코드를 추가하자.
 
 ```yaml
 rules:
-  prefer_typing_uninitialized_variables : false	# 앞에 스페이스바 2개
+  # 스페이스바 2개
+  prefer_typing_uninitialized_variables : false
   prefer_const_constructors_in_immutables : false
   prefer_const_constructors : false
   avoid_print : false
@@ -41,7 +42,7 @@ rules:
 
 1. `prefer_typing_uninitialized_variables`
 	+ 설명 : 초기화되지 않은 변수에 명시적으로 타입을 지정하도록 권장한다.
-    + 예시
+    + 예시  
     ```dart
     // 권장되지 않음
     var foo;
