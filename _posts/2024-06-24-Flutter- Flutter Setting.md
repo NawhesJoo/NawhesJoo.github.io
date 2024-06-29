@@ -212,8 +212,8 @@ Flutter 공식 문서에서 설치하는 방법과 IDE 통합 개발환경 설�
 ### 앱 개발 도구 설치
 
 + 플러터 개발에 사용할 도구로 다음과 같은 IDE(통합 개발 환경)을 지원
-  + `Android Studio` : https://developer.android.com/studio
-  + `Visual Studio Code` : https://code.visualstudio.com/
+  + `Android Studio` : [https://developer.android.com/studio](https://developer.android.com/studio)
+  + `Visual Studio Code` : [https://code.visualstudio.com/](https://developer.android.com/studio)
 
 + 두 가지 IDE 모두 훌륭하지만 플러터는 구글이 만들었기 때문에 자사에서 개발한 안드로이드 스튜디오를 사용하는 것이 편의성 등에서 더 나음
 + 설치 환경을 구성할 때에도 안드로이드 스튜디오가 더 간단함
@@ -224,7 +224,7 @@ Flutter 공식 문서에서 설치하는 방법과 IDE 통합 개발환경 설�
 
 #### Android Studio 설치
 
-1. Android Studio 다운로드(https://developer.android.com/studio)
+1. [https://developer.android.com/studio](Android Studio 다운로드)
 
 ![](https://velog.velcdn.com/images/nawhes_joo/post/2b551630-dd61-4bf6-bf6e-8fbbd1dc1ee9/image.png)
 
