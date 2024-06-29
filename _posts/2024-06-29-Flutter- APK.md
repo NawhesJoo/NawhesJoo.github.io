@@ -106,7 +106,7 @@ Android에서 사용되는 빌드 도구는 `maven`, `gradle` 등이 있으며 �
 ---
 
 1. __APK 파일 생성 및 전송__
-
+ 
    + `flutter run` 명령어를 사용하여 Flutter 프로젝트를 빌드하고 APK 파일을 생성한다.
    + 이 APK 파일은 컴퓨터의 파일 시스템에서 생성되며, 이후 ADB(Android Debug Bridge)를 사용하여 USB로 연결된 Android 기기로 전송된다.
  
