@@ -54,12 +54,18 @@ Android에서 사용되는 빌드 도구는 `maven`, `gradle` 등이 있으며 �
 
 ### 빌드 진행
 
-> 빌드 프로세스는 `gradle` 빌드 도구가 수행한다. 빌드 프로세스는 앱의 소스 코드와 별도 스크립트를 결합하여 `APK` 파일을 생선한다.
+> 빌드 프로세스는 `gradle` 빌드 도구가 수행한다. 빌드 프로세스는 앱의 소스 코드와 별도 스크립트를 결합하여 `APK` 파일을 생성한다.
 
 1. 코틀린 컴파일러는 `.kt` 파일/ 자바 컴파일러는 `.java` 파일을 `.class` 바이트코드파일로 변환한다.
+  > 가상 머신(Virtual Machine)에서 실행되기 위한 코드다. 바이트코드는 소스 코드와 기계어(머신 코드)의 중간 형태로, 직접 실행 가능한 바이너리 코드보다 더 추상화된 형태를 가지고 있다.
 
 2. `Android SDK`의 `dx` 도구를 사용하여 `.class` 파일들을 `.dex` 파일로 변환한다.
 ![](https://velog.velcdn.com/images/nawhes_joo/post/17ca3c56-1a4b-43a0-84ed-92eaab3defe9/image.png)
+  > + `dx` : Android SDK에 포함된 유틸리티로, Java 바이트코드 파일(.class 파일)을 Dalvik 바이트코드 파일(.dex 파일)로 변환하는 역할을 한다.
+  + `dex` : dex(Dalvik Executable 파일)은 Android 운영체제에서 실행하기 위한 바이트코드 파일이다. Dalvik 또는 ART 가상 머신에서 실행된다.
+   1. Dalvik 또는 ART에서 효율적으로 메모리를 관리
+   2. 여러 .class 파일의 내용을 포함하여, 애플리케이션의 로딩 시간을 단축
+   3. 실행 선능을 향상시키기 위해 다양한 최적화 적용
 
 
 3. Android 리소스 패키징 도구(`aapt(Android Asset Packaging Tool)`)와 `gradle` 사용하여 리소스 파일 및 외부 라이브러리 모듈을 `.dex`파일과 함께 APK 파일로 패키징합니다.
