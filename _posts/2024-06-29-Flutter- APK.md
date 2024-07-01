@@ -5,7 +5,7 @@ description: >-
 author: NawhesJoo
 date: 2024-06-29 15:21:00 +0900
 categories: [Framework, Flutter]
-tags: [Flutter]
+tags: [Flutter, APK]
 pin: true
 math: true
 mermaid: true
@@ -15,7 +15,6 @@ image:
   alt: 
 comments: true
 ---
-
 usb로 스마트폰과 연결하여 테스트 할 때 어떤 작업을 진행하는지 알아보자.
 
 ## 빌드
@@ -24,13 +23,15 @@ usb로 스마트폰과 연결하여 테스트 할 때 어떤 작업을 진행하
 
 > Android에서의 빌드는 개발자가 소스 코드를 작성한 후 앱 설치 파일 `APK`를 만들기까지의 실행 과정을 의미한다.
 
-![](https://velog.velcdn.com/images/nawhes_joo/post/1b61a9e6-70f5-4359-bbde-a7c827552a15/image.png)
+![](https://velog.velcdn.com/images/nawhes_joo/post/48ad10a3-cee0-4a41-ae4a-b6a4dc289b24/image.png)
+
 
 Android는 기본적으로 Linux 커널 위에 여러 소프트웨어 스택이 쌓인 형태로 Linux의 빌드와 동일하다고 생각하면 된다.
 
 + Linux에서의 빌드는 소스 코드를 기계어로 컴파일 한 후 사용되는 라이브러리와의 `Link`를 수행하여 실제 실행 파일로 만드는 과정을 의미한다.
 
-![](https://velog.velcdn.com/images/nawhes_joo/post/d367b8ad-b776-4a1a-a442-c7e444602d16/image.png)
+![](https://velog.velcdn.com/images/nawhes_joo/post/710858a0-e342-47b4-9d9d-d3326254c3b1/image.png)
+
 
 ---
 
@@ -58,13 +59,15 @@ Android에서 사용되는 빌드 도구는 `maven`, `gradle` 등이 있으며 �
 1. 코틀린 컴파일러는 `.kt` 파일/ 자바 컴파일러는 `.java` 파일을 `.class` 바이트코드파일로 변환한다.
 
 2. `Android SDK`의 `dx` 도구를 사용하여 `.class` 파일들을 `.dex` 파일로 변환한다.
-![](https://velog.velcdn.com/images/nawhes_joo/post/479a8876-02f8-4927-98de-4f72867d1891/image.png)
+![](https://velog.velcdn.com/images/nawhes_joo/post/17ca3c56-1a4b-43a0-84ed-92eaab3defe9/image.png)
+
 
 3. Android 리소스 패키징 도구(`aapt(Android Asset Packaging Tool)`)와 `gradle` 사용하여 리소스 파일 및 외부 라이브러리 모듈을 `.dex`파일과 함께 APK 파일로 패키징합니다.
 
 4. `APK` 파일은 서명되어야 Android 디바이스에서 실행될 수 있다. `APK` 파일에 서명하기 위해서는 디지털 인증서를 사용해야 한다. `APK` 파일에 서명하는 작업은 빌드 과정에서 `gradle`에 설정된 값에 따라 자동으로 수행한다.
 
-![](https://velog.velcdn.com/images/nawhes_joo/post/1e26822f-cc47-432d-8816-ddeaca40a1c3/image.png)
+![](https://velog.velcdn.com/images/nawhes_joo/post/1d395883-3f99-41ea-bd71-f8f8269c67a4/image.png)
+
 
 이렇게 서명된 `APK`가 만들어질 수 있다.
 
@@ -72,7 +75,8 @@ Android에서 사용되는 빌드 도구는 `maven`, `gradle` 등이 있으며 �
 
 ### APK 설치 및 실행
 
-![](https://velog.velcdn.com/images/nawhes_joo/post/b50c5382-137c-4f5c-8283-ad86dedb3319/image.png)
+![](https://velog.velcdn.com/images/nawhes_joo/post/ce58121b-63ae-4ac9-a022-8c1330021ec9/image.png)
+
 
 + 애플리케이션
   + 애플리케이션 : 사용자가 설치하고 실행하는 앱
@@ -109,23 +113,35 @@ Android에서 사용되는 빌드 도구는 `maven`, `gradle` 등이 있으며 �
 1. PC에 USB로 스마트폰과 연결한다.
 
 2. 스마트폰 설정 메뉴에서 `빌드 번호`를 검색한다.
-![](https://velog.velcdn.com/images/nawhes_joo/post/8433226d-6e34-4f4e-83a3-c4c3705054f5/image.png)
+
+![](https://velog.velcdn.com/images/nawhes_joo/post/46fe2792-49af-4c56-bd2c-741361d1441c/image.png)
+
 
 3. 빌드번호를 연속으로 클릭
-![](https://velog.velcdn.com/images/nawhes_joo/post/462a95f4-c91d-40a5-b825-e003a37c0810/image.png)
+
+![](https://velog.velcdn.com/images/nawhes_joo/post/8b8a6c57-d819-49ca-bbf5-cf3f8088cd81/image.png)
 
 
 4. 설정에 개발자 옵션이 추가되고, 개발자 옵션에서 `USB 디버깅`을 활성화
-![](https://velog.velcdn.com/images/nawhes_joo/post/da43e1bb-ff3c-45cc-8ad7-d3e9c873fd4c/image.png)
+
+![](https://velog.velcdn.com/images/nawhes_joo/post/9d641d70-bb55-4fa2-b344-1879239e2190/image.png)
+
 
 5. flutter doctor 명령을 입력하면 연결된 장치 갯수 표시됨
-![](https://velog.velcdn.com/images/nawhes_joo/post/2acf3d7b-8af3-41b2-bdf7-ebec612051dc/image.png)
+
+![](https://velog.velcdn.com/images/nawhes_joo/post/e43930de-5c2e-42dd-a6cd-c2c8288cc9b1/image.png)
+
 
 6. 안드로이드 스튜디오에서 연결한 기기를 선택 후 실행버튼 클릭
-![](https://velog.velcdn.com/images/nawhes_joo/post/e9e2d168-1f5d-469c-af95-e0e9ade96ee2/image.png)
+
+![](https://velog.velcdn.com/images/nawhes_joo/post/cfb2e131-485c-4efa-8a4e-19053fb1a52c/image.png)
+
+
 
 7. 실제 기기에서 플러터 데모 앱 실행 완료
-![](https://velog.velcdn.com/images/nawhes_joo/post/f4651485-7ce9-4da9-b3af-901f97dea4d9/image.png)
+
+![](https://velog.velcdn.com/images/nawhes_joo/post/aded83b1-90a0-4b8e-be03-240c00da08a3/image.png)
+
 
 ---
 
