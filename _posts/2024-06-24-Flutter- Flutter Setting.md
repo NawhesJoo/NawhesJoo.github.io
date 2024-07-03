@@ -224,7 +224,7 @@ Flutter 공식 문서에서 설치하는 방법과 IDE 통합 개발환경 설�
 
 #### Android Studio 설치
 
-1. [Android Studio 다운로드](https://developer.android.com/studio)
+1. [Android Studio 다운로드](https://developer.android.com/studio)<br>
     1-1 [Android Studio 구버전 다운로드](https://developer.android.com/studio/archive) 
     ![](https://velog.velcdn.com/images/nawhes_joo/post/ea67497b-6886-4d3c-858d-be064cac3b24/image.png)
     우측 상단 언어 한국어 -> ENGLISH로 변경
