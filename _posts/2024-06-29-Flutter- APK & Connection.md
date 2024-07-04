@@ -1,11 +1,11 @@
 ---
-title: Flutter - APK 빌드
+title: Flutter - APK 빌드 및 디바이스 연결
 description: >-
   
 author: NawhesJoo
 date: 2024-06-29 15:21:00 +0900
 categories: [Framework, Flutter]
-tags: [Flutter, APK]
+tags: [Flutter, APK, ADB]
 pin: true
 math: true
 mermaid: true
@@ -15,7 +15,7 @@ image:
   alt: 
 comments: true
 ---
-usb로 스마트폰과 연결하여 테스트 할 때 어떤 작업을 진행하는지 알아보자.
+디바이스와 연결하여 테스트 할 때 어떤 작업을 진행하는지 알아보자.
 
 ## 빌드
 
@@ -114,7 +114,7 @@ Android에서 사용되는 빌드 도구는 `maven`, `gradle` 등이 있으며 �
 
 ---
 
-## 스마트폰과 연결
+## 스마트폰과 연결 (USB)
 
 1. PC에 USB로 스마트폰과 연결한다.
 
@@ -148,6 +148,54 @@ Android에서 사용되는 빌드 도구는 `maven`, `gradle` 등이 있으며 �
 
 ![](https://velog.velcdn.com/images/nawhes_joo/post/aded83b1-90a0-4b8e-be03-240c00da08a3/image.png)
 
+---
+
+## 워치와 연결
+
+1. 워치 개발자 옵션 활성화
+ <h5>1. 갤럭시 워치 설정 메뉴 이동
+ <h5>2. 워치 정보 선택
+ <h5>3. 소프트웨어 선택
+ <h5>4. 소프트웨어 버전 선택
+ <h5>5. 소프트웨어 버전 3번 연타 <개발자 모드를 켰습니다.> 팝업 확인
+ <h5>6. 설정 메뉴에 개발자 옵션이 생겼다면 개발자 모드 활성화 완료
+  
+2. 개발자 옵션에서 "무선 디버깅" 선택하여 활성화 (와이파이 연결 필수)
+   ![](https://velog.velcdn.com/images/nawhes_joo/post/b6ef865d-8385-4926-99d5-3a6f2fd323c9/image.png)
+
+   
+   ![](https://velog.velcdn.com/images/nawhes_joo/post/e0398d5e-33a3-470c-be69-dc4d3f3b24f0/image.png)
+
+
+   
+3. "+ 새 기기 등록" 선택
+   
+	![](https://velog.velcdn.com/images/nawhes_joo/post/e96c1d6a-687b-40eb-bf73-738c68b08c08/image.png)
+
+
+4. IP주소 및 포트 부분 (예 192.1xx.0xx.xxxxx) / 페어링 번호 확인
+   > 워치 화면이 꺼지거나 와이파이 환경이 재접속 될 경우 포트값과 페어링 번호가 달라질 수 있으니 화면이 꺼지지 않도록 주의
+   
+ 
+![](https://velog.velcdn.com/images/nawhes_joo/post/f8c9ae55-f1b4-440b-82f7-74e7ed24122c/image.png)
+
+
+5. 윈도우 - 실행 - cmd (.../Sdk/platform-tools) 또는 Android Studio 터미널에서
+   
+   ```cmd
+   adb pair IP주소 및 포트 (예 192.1xx.0xx.xxxxx)
+   ```
+
+   엔터 입력 후 "Enter pairing code:" 에 페어링 코드 확인 후 입력
+
+![](https://velog.velcdn.com/images/nawhes_joo/post/45fabb4d-289a-49a1-b526-2667bff89112/image.png)
+
+6. 워치에서 페어링 확인
+
+   ![](https://velog.velcdn.com/images/nawhes_joo/post/983133ca-dcb2-4fc4-ba3a-172324c40ab0/image.png)
+
+
+출처 - [minu님 블로그](https://minuhome.tistory.com/6188)
 
 ---
 
