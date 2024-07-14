@@ -6,7 +6,7 @@ author: NawhesJoo
 date: 2024-06-29 15:21:00 +0900
 categories: [Framework, Flutter]
 tags: [Flutter, APK, ADB]
-pin: true
+pin: false
 math: true
 mermaid: true
 image:

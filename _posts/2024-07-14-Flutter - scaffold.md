@@ -1,11 +1,11 @@
 ---
-title: Flutter - 가로새로 배치와 scaffold
+title: Flutter - 가로새로 배치와 Scaffold
 description: >-
   
 author: NawhesJoo
 date: 2024-07-14 15:21:00 +0900
 categories: [Framework, Flutter]
-tags: [Flutter, scaffold, row, column, align]
+tags: [Flutter, Scaffold, Row, Column, align]
 pin: false
 math: true
 mermaid: true
@@ -264,14 +264,17 @@ crossAxisAlignment는 mainAxisAlignment의 반대인 Row - 세로축, Column - �
         appBar: AppBar( title: Text('앱임')),
         body: Text('안녕'),
         bottomNavigationBar: BottomAppBar(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Icon(Icons.phone),
-              Icon(Icons.message),
-              Icon(Icons.contact_page),
-            ],
-          )
+          child: SizedBox(
+            height: 70,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(Icons.phone),
+                Icon(Icons.message),
+                Icon(Icons.contact_page),
+             ],
+            ),
+          ),
         ),
       )
     );
@@ -282,3 +285,5 @@ crossAxisAlignment는 mainAxisAlignment의 반대인 Row - 세로축, Column - �
 ![](https://velog.velcdn.com/images/nawhes_joo/post/774647af-b3f1-435d-a2b5-b11ad6d55c99/image.png)
 
 이렇게 디자인을 할 수 있다.
+
+출처 - [코딩애플](https://www.youtube.com/@codingapple)
