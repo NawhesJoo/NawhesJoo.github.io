@@ -3,7 +3,7 @@ title: Flutter - 가로새로 배치와 Scaffold
 description: >-
   
 author: NawhesJoo
-date: 2024-07-14 15:21:00 +0900
+date: 2024-07-18 15:21:00 +0900
 categories: [Framework, Flutter]
 tags: [Flutter, Scaffold, Row, Column, align]
 pin: false
