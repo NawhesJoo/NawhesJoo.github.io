@@ -3,7 +3,7 @@ title: Flutter - 박스 디자인
 description: >-
   
 author: NawhesJoo
-date: 2024-07-14 15:21:00 +0900
+date: 2024-07-17 15:21:00 +0900
 categories: [Framework, Flutter]
 tags: [Flutter, box, margin, padding, decoration]
 pin: false
